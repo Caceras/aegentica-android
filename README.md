@@ -1,3 +1,30 @@
+<!-- repo-card:start -->
+<p align="center"><img src=".github/repo-card/cover.jpg" alt="Ægentica AI: Android AI assistant with transcription, notes, voice and a phone agent" width="100%"></p>
+
+<h2><img src=".github/repo-card/logo.png" width="34" height="34" align="absmiddle" alt=""> Ægentica AI</h2>
+
+**The Android app for Ægentica: an AI assistant on the phone that transcribes speech word for word, keeps notes, talks back by voice, has its own keyboard and can tap and type in other apps for you, always asking first.**
+
+**Vision:** one AI agent ("the genie") reachable from every surface of the phone, sharing the same memory, chats and tasks as aegentica.se. Select text in any app, press the assistant gesture or the Ægentica key on the keyboard, and the same agent picks up the conversation.
+
+| | |
+|---|---|
+| **Status** | Preview APK published through GitHub Releases, not on Google Play yet. Companion app to [aegentica.se](https://aegentica.se) |
+| **Code quality** | ★★★★★ 5/5. 41 test files (about 7,000 lines of tests), CI runs lint, unit tests and builds before each release, detailed docs |
+| **Size** | About 27,400 lines of own code, 41 test files |
+| **Stack** | Native Kotlin Android (no third-party libraries in the core), Gemini Nano on device, Gemini Live, OpenRouter, LiveKit; Python LiveKit voice agent |
+| **What works** | On-device word-for-word transcription, speaker labels with Gemini, assistant sheet that sees the current screen, "Hands" agent that taps and types with confirmations, custom keyboard with the agent built in, real-time voice over your notes, Markdown vault mirror, reminders, widgets, Quick Settings tiles, OpenRouter sign-in |
+| **Worth reusing** | `app/src/main/java/com/caceras/surfacelab/Hands.kt` + `HandsService.kt` (accessibility phone agent with stop guards); `AegenticaKeyboard.kt` + `KeysView.kt` (dependency-free Swedish/English keyboard); `GeminiTranscribe.kt` (transcription with per-speaker timestamps) |
+| **Renamed** | Was `my-surface-app` until 25 Nov 2026 |
+
+<p align="center">
+<img src=".github/repo-card/screenshot.jpg" width="90%" alt="Ægentica AI chat, voice and dark mode screens">
+</p>
+<p align="center"><sub>Images from this repo: docs/images/chat.png, voice.png and chat-night.png (renders from the app's test fixture, not a real device)</sub></p>
+<!-- repo-card:end -->
+
+---
+
 # Ægentica AI
 
 A native Kotlin Android workspace for **Today · AI · Library**, now **transcription first**: capture spoken words verbatim, let AI polish a copy, connect ideas, plan your day, and think by typing or speaking. Gemini Nano, dictation, notes and local reminders need no account. Optional connected AI and scheduled generation use your own provider; calendar and Beeper access are explicit choices.
